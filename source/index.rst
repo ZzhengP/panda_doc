@@ -8,9 +8,11 @@ Welcome to franka_MPC's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :name: mastertoc
+   :glob:
 
-   installOnUbuntu/index
-   About
+   installOnLinux
+   reference
 
 Indices and tables
 ==================
