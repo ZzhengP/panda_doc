@@ -12,6 +12,7 @@ Welcome to franka_MPC's documentation!
    :glob:
 
    installOnLinux
+   gettingstarted
    reference
 
 Indices and tables

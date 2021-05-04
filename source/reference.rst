@@ -26,3 +26,11 @@ Github Related issus
 
 The problem is due to a modification in Github remote, but we didn't fetch it in the local file.
 <https://www.cnblogs.com/bigtreei/p/10180383.html>
+
+libfranka error:
+---------------------
+* Move command rejected:
+
+  .. code-block:: shell
+
+      rostopic pub -1 /franka_control/error_recovery/goal franka_msgsErrorRecoveryActionGoal {}

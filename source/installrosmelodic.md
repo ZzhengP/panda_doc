@@ -1,4 +1,4 @@
-Installing ROS melodic on Ubuntu 18
+Installing ROS melodic 
 ====================================
 
 Follow the official installation guide to get ROS Kinetic at the following URL:
