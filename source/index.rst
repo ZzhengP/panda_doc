@@ -11,7 +11,9 @@ Welcome to franka_MPC's documentation!
    :name: mastertoc
    :glob:
 
+   overview
    installOnLinux
+   gettingstarted
    reference
 
 Indices and tables
