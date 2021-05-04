@@ -17,3 +17,12 @@ Useful links
   <https://about.gitlab.com/handbook/markdown-guide/>`_.
 * `Sphinx Syntax
   <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/lists.html>`_.
+
+Github Related issus
+---------------------
+.. code-block:: shell
+
+   [rejected] master -> master (fetch first) error: failed to push some refs to
+
+The problem is due to a modification in Github remote, but we didn't fetch it in the local file.
+<https://www.cnblogs.com/bigtreei/p/10180383.html>
