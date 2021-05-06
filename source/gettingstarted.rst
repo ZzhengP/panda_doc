@@ -62,6 +62,42 @@ You can test if the connection is established by the following commands:
    ./communication_test 172.16.0.2
 
 You can launch a simple ros example by:
+
 .. code-block:: shell
 
    roslaunch franka_example_controllers joint_position_example_controller.launch robot_ip:=172.16.0.2 load_gripper:=true
+
+Working with velocity_qp
+------------------------
+A generic low-level joint velocity controller with a QP formulation developed by Lucas Joseph at INRIA Bordeaux, Auctus team.
+
+.. code-block:: shell
+
+   1. mkdir -p ~/auctus_ws/src
+      cd ~/auctus_ws
+      catkin config --init --extend ~/catkin_ws/devel --cmake-args -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/libfranka/build -DCMAKE_CXX_FLAGS=-std=c++11
+
+  2. cd ~/auctus_ws/src
+  3. git clone https://gitlab.inria.fr/auctus/panda/velocity_qp.git
+     wstool init
+     wstool merge velocity_qp/velocity_qp.rosinstall
+     wstool update
+     cd ..
+  4. rosdep install --from-paths src --ignore-src -r -y --skip-keys="libfranka"
+  5. catkin_make
+
+
+Delete qpOASES from auctus_ws/src repository, then, install the qpOASES from [mygithub](https://github.com/ZzhengP/robot_ws_zheng).
+modify also the CMakeList.txt in velocity_qp repository. change tip_link name in velocity_qp.yaml to panda_link8. 
+
+
+Practical run time issus
+-------------------------
+
+* Ensure that the robot configuration is not modified by other people
+* Guide mode can be selected via robot desktop. When using guide mode, push the white/black botton to lower position.
+* When you want to control the robot via your code, pull the botton, otherwise, you will see error as:
+
+.. code-block:: shell
+
+    libfranka: Set Joint Impedance command rejected: command not possible in the current mode

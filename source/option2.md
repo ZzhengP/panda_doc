@@ -61,6 +61,9 @@ catkin_make -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=~/libfranka/build
 source devel/setup.sh
 ```  
 
+## Useful Package for MPC_ros project
+qpOASES is required for solving quadratic optimization problem. A [ros-wrapper](https://github.com/kuka-isir/qpOASES) version is preferred here to use directly is ROS.
+
 ## Setting up the real-time Kernel
 In order to control your robot using ``` libfranka ```, the controller program on the workstation PC must run with real-time priority under a ```PREEMPT_RT ``` kernel . This section describes the procedure of patching a kernel to support ```PREEMPT_RT ``` and creating an installation package.
 ***
@@ -73,7 +76,7 @@ NVIDIA binary drivers are not supported on PREEMPT_RT kernels.
   ```sh
   apt-get install build-essential bc curl ca-certificates fakeroot gnupg2 libssl-dev lsb-release libelf-dev bison flex
   ```
-- Download the version of the real-time kernel and associated patch, the version of the real-  time kernel and the patch must be the same. Here, for ubuntu 18, i choose version 5.4.**.
+- Download the version of the real-time kernel and associated patch, the version of the real-  time kernel and the patch must be the same. Here, for ubuntu 18, i choose version 5.4.10
   ```sh
   wget https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.4.19.tar.xz
   wget https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.4/patch-5.4.19-rt11.patch.xz
@@ -100,6 +103,8 @@ NVIDIA binary drivers are not supported on PREEMPT_RT kernels.
 
   > 5. Fully Preemptible Kernel (RT) (PREEMPT_RT_FULL) (NEW)
   ```
+
+If preemptinble not found, try it in General Setting
 - Compile:
 ```sh
    make -j20
