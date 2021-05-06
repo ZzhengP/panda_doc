@@ -14,6 +14,7 @@ Welcome to franka_MPC's documentation!
    overview
    installOnLinux
    gettingstarted
+   libfranka
    reference
 
 Indices and tables
