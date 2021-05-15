@@ -27,6 +27,8 @@ Github Related issus
 The problem is due to a modification in Github remote, but we didn't fetch it in the local file.
 <https://www.cnblogs.com/bigtreei/p/10180383.html>
 
+<https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
+
 libfranka error:
 ---------------------
 * Move command rejected:
