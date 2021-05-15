@@ -88,8 +88,17 @@ A generic low-level joint velocity controller with a QP formulation developed by
 
 
 Delete qpOASES from auctus_ws/src repository, then, install the qpOASES from [mygithub](https://github.com/ZzhengP/robot_ws_zheng).
-modify also the CMakeList.txt in velocity_qp repository. change tip_link name in velocity_qp.yaml to panda_link8. 
+modify also the CMakeList.txt in velocity_qp repository. change tip_link name in velocity_qp.yaml to panda_link8.
 
+
+MPC wrap of velocity_qp
+-----------------------
+The source code and catkin workspace can be found on github repository. This package is called `panda_mpc`_.
+
+.. _panda_mpc: https://github.com/ZzhengP/catkin_ws
+
+1. add panda_mpc_plugin to insert it in gazebo_control_plugin
+2. add gazebo world plugin for simulation (replace the "sim" argument in run.launch by false when using the real robot )
 
 Practical run time issus
 -------------------------

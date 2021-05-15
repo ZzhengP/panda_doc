@@ -127,5 +127,5 @@ sudo usermod -a -G realtime $(whoami)
 Links for real-time kernel installation:
 - <https://stackoverflow.com/questions/51669724/install-rt-linux-patch-for-ubuntu>
 - <https://blog.csdn.net/lsky380/article/details/90769058>
-
+- <https://blog.csdn.net/qq_33445388/article/details/116034745>
 ***
