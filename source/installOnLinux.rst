@@ -12,7 +12,7 @@ using `ROS <http://www.ros.org/>`_.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    installrosmelodic
    option1

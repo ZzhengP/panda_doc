@@ -24,6 +24,7 @@ you can do this in the terminal with:
 .. important::
 
   The workstation PC which commands your robot using the FCI must always be connected to the LAN port of Control (shop floor network) and not to the LAN port of the Arm (robot network).
+  If first time you connect to Panda with Ethernet, choose automatic option for DNS adress.
 
 
 Turn on your robot and wait until the light stabilises, make sure both emergency stops are pulled up as shown in the figure.

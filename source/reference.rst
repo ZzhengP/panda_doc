@@ -1,4 +1,4 @@
-About
+Error and problem list
 ==============================================================================================
 This is a documentation about the integration of model predictive control framework in Panda
 
@@ -31,8 +31,14 @@ The problem is due to a modification in Github remote, but we didn't fetch it in
 
 libfranka error:
 ---------------------
-* Move command rejected:
+* Move command rejected: Or verify is the ethernet cable is fast enough
 
   .. code-block:: shell
 
       rostopic pub -1 /franka_control/error_recovery/goal franka_msgsErrorRecoveryActionGoal {}
+
+* Unable to schedule real-time task:
+
+  .. code-block:: shell
+
+     sudo usermod -a -G realtime $(whoami)
